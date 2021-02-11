@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LifeLink xmlns="urn:lifelink-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:lifelink-schema llXML.xsd">
+    <LL>
+        <UserName>SelectUser</UserName>
+        <UserPassword>SelectPass#1</UserPassword>
+        <SessionID>9bdef9f1-edbb-4e51-b73d-054f583a5de3</SessionID>
+        <InterfaceType>NoGUI</InterfaceType>
+        <OutputType>XML</OutputType>
+        <Logout>false</Logout>
+        <Tool>
+            <Name>VitalTerm_Net</Name>
+        </Tool>
+    </LL>
+    <UserInformation>
+        <FirstName>UserName</FirstName>
+        <LastName>UserLastName</LastName>
+    </UserInformation>
+    <Client>
+        <Applicant>
+            <FirstName>ClientFirstName</FirstName>
+            <LastName>ClientLastName</LastName>
+            <Age>45</Age>
+            <Sex>Male</Sex>
+        </Applicant>
+        <StateOfIssue>CA</StateOfIssue>
+    </Client>
+    <VitalTermNet>
+        <UWClassDetermination>
+            <!--Requesting a class be generated from the Class Determiantion System-->
+            <DeterminatorAnswerXML>
+                <!--Three questions aswered here:  Height/Weight, Blood Pressure and Cholestrol Level-->
+                <Question QuesType="HEIGHTWEIGHT" QuesId="1">
+                    <Answers>
+                        <Control id="1" ControlValueType="ABSOLUTE" Answer="70" />
+                        <!--Height of client in Inches-->
+                        <Control id="2" ControlValueType="RANGE" Answer="200" />
+                        <!--Weight of client-->
+          
+                    </Answers>
+                </Question>
+                <Question QuesType="TOBACCO" QuesId="2">
+                    <Answers>
+                        <!-- this scenario is for a current cigarette user that smokes 20 cigarettes a day-->
+                        <Control id="3" ControlValueType="ABSOLUTE" Answer="1" />
+                        <!--Example of a Current User of Cigarettes, Cigars and Pipes -->
+                        <Control id="4" ControlValueType="ABSOLUTE_CHECKLIST" Answer="1" />
+                        <Control id="79" ControlValueType="RANGE" Answer="20" />
+                        <!--Cigarette frequency for cigs per day-->
+                        <Control id="78" ControlValueType="ABSOLUTE" Answer="-1" />
+                        <!--Will Test Negative for Nicotine-->
+                        <!-- Values are -1 for NO and 1 for Yes-->
+          
+                    </Answers>
+                </Question>
+                <Question QuesType="BLOOD_PRESSURE" QuesId="3">
+                    <Answers>
+                        <Control id="7" ControlValueType="RANGE" Answer="139" />
+                        <!--clients Systolic blood pressure-->
+                        <Control id="73" ControlValueType="RANGE" Answer="75" />
+                        <!--clients Dystolci blood pressure-->
+                        <Control id="8" ControlValueType="MAXIMUM" Answer="0" />
+                        <!-- client takes medication or not-->
+          
+                    </Answers>
+                </Question>
+                <Question QuesType="GENERIC" QuesId="4">
+                    <Answers>
+                        <Control id="9" ControlValueType="RANGE" Answer="178" />
+                        <!--clients cholesterol level-->
+                        <Control id="11" ControlValueType="MAXIMUM" Answer="0" />
+                        <!--client takes medication or not-->
+          
+                    </Answers>
+                </Question>
+            </DeterminatorAnswerXML>
+            <DeterminatorOutputXML>
+                <Product ProductId="62" ClassId="5" Message="" ResponseType="Class was returned" ClassName="Pref. T" IsTableRated="false" TableRatingID="" TableRatingName="" IsXRaeDetermined="true" />
+                <Product ProductId="1261" ClassId="5" Message="" ResponseType="Class was returned" ClassName="Pfd Tob" IsTableRated="false" TableRatingID="" TableRatingName="" IsXRaeDetermined="true" />
+                <Product ProductId="1896" ClassId="4" Message="" ResponseType="Class was returned" ClassName="Pfd Tob" IsTableRated="true" TableRatingID="" TableRatingName="Preferred Tobacco" IsXRaeDetermined="false" />
+                <Product ProductId="1708" ClassId="5" Message="" ResponseType="Class was returned" ClassName="Pref Tob" IsTableRated="false" TableRatingID="" TableRatingName="" IsXRaeDetermined="true" />
+                <Product ProductId="1752" ClassId="4" Message="" ResponseType="Class was returned" ClassName="Tobacco" IsTableRated="false" TableRatingID="" TableRatingName="" IsXRaeDetermined="true" />
+                <Product ProductId="1205" ClassId="4" Message="" ResponseType="Class was returned" ClassName="Tobacco" IsTableRated="false" TableRatingID="" TableRatingName="" IsXRaeDetermined="true" />
+                <Product ProductId="498" ClassId="6" Message="" ResponseType="Class was returned" ClassName="Std Nic" IsTableRated="false" TableRatingID="" TableRatingName="" IsXRaeDetermined="true" />
+                <Product ProductId="1245" ClassId="5" Message="" ResponseType="Class was returned" ClassName="Pfd Tob" IsTableRated="false" TableRatingID="" TableRatingName="" IsXRaeDetermined="true" />
+            </DeterminatorOutputXML>
+        </UWClassDetermination>
+        <Products>
+            <ProductOptions>
+                <BreakDownPremiums>0</BreakDownPremiums>
+                <CalcToPenny>1</CalcToPenny>
+                <DisplayProductClasses>0</DisplayProductClasses>
+                <GetCompanyInfo>1</GetCompanyInfo>
+                <ShowCurrentRates>0</ShowCurrentRates>
+                <ShowRemovedProducts>1</ShowRemovedProducts>
+                <ShowProdInfoOnRemoval>1</ShowProdInfoOnRemoval>
+                <ShowProdInfoOnly>0</ShowProdInfoOnly>
+                <ShowPremiumsOnly>0</ShowPremiumsOnly>
+                <Calc1stYearModal>1</Calc1stYearModal>
+            </ProductOptions>
+            <ProductLists>
+                <YearsLevel>20</YearsLevel>
+            </ProductLists>
+            <ProductScenarios>
+                <Scenario>
+                    <FaceAmount>500000</FaceAmount>
+                    <PaymentMode>0</PaymentMode>
+                    <!--Not specifing a class here.  Taken care of by class determination request.-->
+        
+                </Scenario>
+            </ProductScenarios>
+            <NumberOfProductsQuoted>8</NumberOfProductsQuoted>
+            <NumberOfProductsRemoved>0</NumberOfProductsRemoved>
+            <Product id="1261" name="Banner OPTerm 20 (01-21)" type="TERM">
+                <Options>
+                    <BreakDownPremiums>0</BreakDownPremiums>
+                    <CalcToPenny>1</CalcToPenny>
+                    <DisplayProductClasses>0</DisplayProductClasses>
+                    <GetCompanyInfo>1</GetCompanyInfo>
+                    <ShowCurrentRates>0</ShowCurrentRates>
+                    <ShowRemovedProducts>1</ShowRemovedProducts>
+                    <ShowProdInfoOnRemoval>1</ShowProdInfoOnRemoval>
+                    <RetrieveProductListIDs>0</RetrieveProductListIDs>
+                    <ShowProdInfoOnly>0</ShowProdInfoOnly>
+                    <ShowPremiumsOnly>0</ShowPremiumsOnly>
+                    <YearsToCalc>
+                        <Year>1</Year>
+                        <Year>2</Year>
+                        <Year>3</Year>
+                        <Year>4</Year>
+                        <Year>5</Year>
+                        <Year>6</Year>
+                        <Year>7</Year>
+                        <Year>8</Year>
+                        <Year>9</Year>
+                        <Year>10</Year>
+                        <Year>11</Year>
+                        <Year>12</Year>
+                        <Year>13</Year>
+                        <Year>14</Year>
+                        <Year>15</Year>
+                        <Year>16</Year>
+                        <Year>17</Year>
+                        <Year>18</Year>
+                        <Year>19</Year>
+                        <Year>20</Year>
+                        <Year>21</Year>
+                        <Year>22</Year>
+                        <Year>23</Year>
+                        <Year>24</Year>
+                        <Year>25</Year>
+                        <Year>26</Year>
+                        <Year>27</Year>
+                        <Year>28</Year>
+                        <Year>29</Year>
+                        <Year>30</Year>
+                        <Year>31</Year>
+                        <Year>32</Year>
+                        <Year>33</Year>
+                        <Year>34</Year>
+                        <Year>35</Year>
+                        <Year>36</Year>
+                        <Year>37</Year>
+                        <Year>38</Year>
+                        <Year>39</Year>
+                        <Year>40</Year>
+                    </YearsToCalc>
+                    <Calc1stYearModal>1</Calc1stYearModal>
+                    <Sorting>
+                        <Sort>
+                            <Name>GUARANTEEDPREMIUMS.DCVALUE</Name>
+                            <Direction>0</Direction>
+                            <StartYear>1</StartYear>
+                            <EndYear>1</EndYear>
+                        </Sort>
+                    </Sorting>
+                    <Filtering>
+          </Filtering>
+                    <ShowAvailableRiders>0</ShowAvailableRiders>
+                </Options>
+                <Scenario>
+                    <Request>
+                        <FaceAmount>500000</FaceAmount>
+                        <Premium>0</Premium>
+                        <PaymentMode>0</PaymentMode>
+                        <UnderwritingClassInfo type="Product">
+                            <Class>5</Class>
+                            <TableRating>0</TableRating>
+                            <VTClassID>3</VTClassID>
+                            <VTSmokingStatus>3</VTSmokingStatus>
+                        </UnderwritingClassInfo>
+                    </Request>
+                    <Return>
+                        <DisplayedInformation>
+                            <ProductInformation>
+                                <DisplayName>Banner OPTerm 20 (01-21)</DisplayName>
+                                <NAICCertified>false</NAICCertified>
+                                <RateCard>N/A</RateCard>
+                                <SoftwareVersion>Version 4.0</SoftwareVersion>
+                                <PolicyFormNumber>LAA 1901</PolicyFormNumber>
+                                <AgeNearestLast>Nearest</AgeNearestLast>
+                                <CalculatedAge>45</CalculatedAge>
+                                <ModalFactors>
+                                    <Factor name="Semi Annual" type="Percent" value="0.51" />
+                                    <Factor name="Quarterly" type="Percent" value="0.26" />
+                                    <Factor name="Monthly Bank Draft" type="Percent" value="0.085" />
+                                </ModalFactors>
+                                <ExtraFees>
+                                    <PolicyFee>60</PolicyFee>
+                                </ExtraFees>
+                                <YearsLevel>20</YearsLevel>
+                                <GuaranteedPeriod value="20" type="Years" />
+                                <MaxYearsToShow>0</MaxYearsToShow>
+                                <MaturityAge value="95" type="Age" />
+                                <IssueAges>
+                                    <Minimum>20</Minimum>
+                                    <Maximum>65</Maximum>
+                                </IssueAges>
+                                <FaceAmounts>
+                                    <Minimum>100000</Minimum>
+                                    <Maximum>999999999</Maximum>
+                                </FaceAmounts>
+                                <MinimumPremium>0</MinimumPremium>
+                                <Reentry>
+                                    <Text>N/A</Text>
+                                </Reentry>
+                                <Conversion>
+                                    <Text>Earlier of 20th yr or age 70</Text>
+                                </Conversion>
+                                <UnderwritingClasses>
+                                    <ClassIDRan>5</ClassIDRan>
+                                    <ClassNameRan>Pfd Tob</ClassNameRan>
+                                </UnderwritingClasses>
+                            </ProductInformation>
+                            <PremiumInformation>
+                                <Premiums type="Guaranteed">
+                                    <TotalPremiums>
+                                        <Premium year="1" value="$2,414.94" />
+                                        <Premium year="2" value="$2,414.94" />
+                                        <Premium year="3" value="$2,414.94" />
+                                        <Premium year="4" value="$2,414.94" />
+                                        <Premium year="5" value="$2,414.94" />
+                                        <Premium year="6" value="$2,414.94" />
+                                        <Premium year="7" value="$2,414.94" />
+                                        <Premium year="8" value="$2,414.94" />
+                                        <Premium year="9" value="$2,414.94" />
+                                        <Premium year="10" value="$2,414.94" />
+                                        <Premium year="11" value="$2,414.94" />
+                                        <Premium year="12" value="$2,414.94" />
+                                        <Premium year="13" value="$2,414.94" />
+                                        <Premium year="14" value="$2,414.94" />
+                                        <Premium year="15" value="$2,414.94" />
+                                        <Premium year="16" value="$2,414.94" />
+                                        <Premium year="17" value="$2,414.94" />
+                                        <Premium year="18" value="$2,414.94" />
+                                        <Premium year="19" value="$2,414.94" />
+                                        <Premium year="20" value="$2,414.94" />
+                                    </TotalPremiums>
+                                </Premiums>
+                                <FirstYearModalPremiums>
+                                    <Premium modal="Guar1stAnnual" value="$2,414.94" />
+                                    <Premium modal="Guar1stSemiAnnual" value="$1,231.62" />
+                                    <Premium modal="Guar1stQuarterly" value="$627.88" />
+                                    <Premium modal="Guar1stMonthlyBankDraft" value="$205.27" />
+                                </FirstYearModalPremiums>
+                            </PremiumInformation>
+                        </DisplayedInformation>
+                    </Return>
+                </Scenario>
+                <CompanyInfo>
+                    <Name>Banner Life</Name>
+                    <NAIC>
+                        <Code>94250</Code>
+                        <NAICCertified>false</NAICCertified>
+                    </NAIC>
+                    <Address>
+                        <Street>3275 Bennett Creek Avenue</Street>
+                        <CityStateZip>Frederick MD 21704</CityStateZip>
+                    </Address>
+                    <Phone>301-279-4800</Phone>
+                    <URL>www.lgamerica.com</URL>
+                    <CompanyType>Stock</CompanyType>
+                    <Founded>1981</Founded>
+                    <DataDate>12/31/2019</DataDate>
+                    <RateDate>2/1/2021</RateDate>
+                    <Assets>$5,048,017</Assets>
+                    <Liabilities>$4,432,668</Liabilities>
+                    <Ratings>
+                        <AMBest>A+(2)</AMBest>
+                        <SandP>AA-(4)</SandP>
+                        <Fitch>AA-(4)</Fitch>
+                        <Moodys>
+            </Moodys>
+                    </Ratings>
+                </CompanyInfo>
+            </Product>
+            <Product id="62" name="AG Select-A-Term 20 (01-21)" type="TERM">
+                <Options>
+                    <BreakDownPremiums>0</BreakDownPremiums>
+                    <CalcToPenny>1</CalcToPenny>
+                    <DisplayProductClasses>0</DisplayProductClasses>
+                    <GetCompanyInfo>1</GetCompanyInfo>
+                    <ShowCurrentRates>0</ShowCurrentRates>
+                    <ShowRemovedProducts>1</ShowRemovedProducts>
+                    <ShowProdInfoOnRemoval>1</ShowProdInfoOnRemoval>
+                    <RetrieveProductListIDs>0</RetrieveProductListIDs>
+                    <ShowProdInfoOnly>0</ShowProdInfoOnly>
+                    <ShowPremiumsOnly>0</ShowPremiumsOnly>
+                    <YearsToCalc>
+                        <Year>1</Year>
+                        <Year>2</Year>
+                        <Year>3</Year>
+                        <Year>4</Year>
+                        <Year>5</Year>
+                        <Year>6</Year>
+                        <Year>7</Year>
+                        <Year>8</Year>
+                        <Year>9</Year>
+                        <Year>10</Year>
+                        <Year>11</Year>
+                        <Year>12</Year>
+                        <Year>13</Year>
+                        <Year>14</Year>
+                        <Year>15</Year>
+                        <Year>16</Year>
+                        <Year>17</Year>
+                        <Year>18</Year>
+                        <Year>19</Year>
+                        <Year>20</Year>
+                        <Year>21</Year>
+                        <Year>22</Year>
+                        <Year>23</Year>
+                        <Year>24</Year>
+                        <Year>25</Year>
+                        <Year>26</Year>
+                        <Year>27</Year>
+                        <Year>28</Year>
+                        <Year>29</Year>
+                        <Year>30</Year>
+                    </YearsToCalc>
+                    <Calc1stYearModal>1</Calc1stYearModal>
+                    <Sorting>
+                        <Sort>
+                            <Name>GUARANTEEDPREMIUMS.DCVALUE</Name>
+                            <Direction>0</Direction>
+                            <StartYear>1</StartYear>
+                            <EndYear>1</EndYear>
+                        </Sort>
+                    </Sorting>
+                    <Filtering>
+          </Filtering>
+                    <ShowAvailableRiders>0</ShowAvailableRiders>
+                </Options>
+                <Scenario>
+                    <Request>
+                        <FaceAmount>500000</FaceAmount>
+                        <Premium>0</Premium>
+                        <PaymentMode>0</PaymentMode>
+                        <UnderwritingClassInfo type="Product">
+                            <Class>5</Class>
+                            <TableRating>0</TableRating>
+                            <VTClassID>3</VTClassID>
+                            <VTSmokingStatus>3</VTSmokingStatus>
+                        </UnderwritingClassInfo>
+                    </Request>
+                    <Return>
+                        <DisplayedInformation>
+                            <ProductInformation>
+                                <DisplayName>AG Select-A-Term 20 (01-21)</DisplayName>
+                                <NAICCertified>false</NAICCertified>
+                                <RateCard>N/A</RateCard>
+                                <SoftwareVersion>WinFlex Web</SoftwareVersion>
+                                <PolicyFormNumber>ICC16-16901</PolicyFormNumber>
+                                <AgeNearestLast>Nearest</AgeNearestLast>
+                                <CalculatedAge>45</CalculatedAge>
+                                <ModalFactors>
+                                    <Factor name="Semi Annual" type="Percent" value="0.52" />
+                                    <Factor name="Quarterly" type="Percent" value="0.265" />
+                                    <Factor name="Monthly Bank Draft" type="Percent" value="0.0855" />
+                                </ModalFactors>
+                                <ExtraFees>
+                                    <PolicyFee>64</PolicyFee>
+                                </ExtraFees>
+                                <YearsLevel>20</YearsLevel>
+                                <GuaranteedPeriod value="20" type="Years" />
+                                <MaxYearsToShow>30</MaxYearsToShow>
+                                <MaturityAge value="95" type="Age" />
+                                <IssueAges>
+                                    <Minimum>20</Minimum>
+                                    <Maximum>65</Maximum>
+                                </IssueAges>
+                                <FaceAmounts>
+                                    <Minimum>100000</Minimum>
+                                    <Maximum>999999999</Maximum>
+                                </FaceAmounts>
+                                <MinimumPremium>0</MinimumPremium>
+                                <Reentry>
+                                    <Text>N/A</Text>
+                                </Reentry>
+                                <Conversion>
+                                    <Text>Earlier of 20 yrs or age 70</Text>
+                                </Conversion>
+                                <UnderwritingClasses>
+                                    <ClassIDRan>5</ClassIDRan>
+                                    <ClassNameRan>Pref. T</ClassNameRan>
+                                </UnderwritingClasses>
+                            </ProductInformation>
+                            <PremiumInformation>
+                                <Premiums type="Guaranteed">
+                                    <TotalPremiums>
+                                        <Premium year="1" value="$2,414.95" />
+                                        <Premium year="2" value="$2,414.95" />
+                                        <Premium year="3" value="$2,414.95" />
+                                        <Premium year="4" value="$2,414.95" />
+                                        <Premium year="5" value="$2,414.95" />
+                                        <Premium year="6" value="$2,414.95" />
+                                        <Premium year="7" value="$2,414.95" />
+                                        <Premium year="8" value="$2,414.95" />
+                                        <Premium year="9" value="$2,414.95" />
+                                        <Premium year="10" value="$2,414.95" />
+                                        <Premium year="11" value="$2,414.95" />
+                                        <Premium year="12" value="$2,414.95" />
+                                        <Premium year="13" value="$2,414.95" />
+                                        <Premium year="14" value="$2,414.95" />
+                                        <Premium year="15" value="$2,414.95" />
+                                        <Premium year="16" value="$2,414.95" />
+                                        <Premium year="17" value="$2,414.95" />
+                                        <Premium year="18" value="$2,414.95" />
+                                        <Premium year="19" value="$2,414.95" />
+                                        <Premium year="20" value="$2,414.95" />
+                                    </TotalPremiums>
+                                </Premiums>
+                                <FirstYearModalPremiums>
+                                    <Premium modal="Guar1stAnnual" value="$2,414.95" />
+                                    <Premium modal="Guar1stSemiAnnual" value="$1,255.77" />
+                                    <Premium modal="Guar1stQuarterly" value="$639.96" />
+                                    <Premium modal="Guar1stMonthlyBankDraft" value="$206.48" />
+                                </FirstYearModalPremiums>
+                            </PremiumInformation>
+                        </DisplayedInformation>
+                    </Return>
+                </Scenario>
+                <CompanyInfo>
+                    <Name>American General Life Companies</Name>
+                    <NAIC>
+                        <Code>60488</Code>
+                        <NAICCertified>false</NAICCertified>
+                    </NAIC>
+                    <Address>
+                        <Street>P.O. Box 1591 3-D1</Street>
+                        <CityStateZip>Houston TX 77251</CityStateZip>
+                    </Address>
+                    <Phone>713-522-1111</Phone>
+                    <URL>www.aglife.com</URL>
+                    <CompanyType>Stock</CompanyType>
+                    <Founded>1960</Founded>
+                    <DataDate>12/31/2019</DataDate>
+                    <RateDate>2/1/2021</RateDate>
+                    <Assets>$192,292,551</Assets>
+                    <Liabilities>$186,003,878</Liabilities>
+                    <Ratings>
+                        <AMBest>A(3)</AMBest>
+                        <SandP>A+(5)</SandP>
+                        <Fitch>A+(5)</Fitch>
+                        <Moodys>A2(6)</Moodys>
+                    </Ratings>
+                </CompanyInfo>
+            </Product>
+            <Product id="1708" name="Pacific PL Promise 20 (09-20)" type="TERM">
+                <Options>
+                    <BreakDownPremiums>0</BreakDownPremiums>
+                    <CalcToPenny>1</CalcToPenny>
+                    <DisplayProductClasses>0</DisplayProductClasses>
+                    <GetCompanyInfo>1</GetCompanyInfo>
+                    <ShowCurrentRates>0</ShowCurrentRates>
+                    <ShowRemovedProducts>1</ShowRemovedProducts>
+                    <ShowProdInfoOnRemoval>1</ShowProdInfoOnRemoval>
+                    <RetrieveProductListIDs>0</RetrieveProductListIDs>
+                    <ShowProdInfoOnly>0</ShowProdInfoOnly>
+                    <ShowPremiumsOnly>0</ShowPremiumsOnly>
+                    <YearsToCalc>
+                        <Year>1</Year>
+                        <Year>2</Year>
+                        <Year>3</Year>
+                        <Year>4</Year>
+                        <Year>5</Year>
+                        <Year>6</Year>
+                        <Year>7</Year>
+                        <Year>8</Year>
+                        <Year>9</Year>
+                        <Year>10</Year>
+                        <Year>11</Year>
+                        <Year>12</Year>
+                        <Year>13</Year>
+                        <Year>14</Year>
+                        <Year>15</Year>
+                        <Year>16</Year>
+                        <Year>17</Year>
+                        <Year>18</Year>
+                        <Year>19</Year>
+                        <Year>20</Year>
+                        <Year>21</Year>
+                        <Year>22</Year>
+                        <Year>23</Year>
+                        <Year>24</Year>
+                        <Year>25</Year>
+                        <Year>26</Year>
+                        <Year>27</Year>
+                        <Year>28</Year>
+                        <Year>29</Year>
+                        <Year>30</Year>
+                    </YearsToCalc>
+                    <Calc1stYearModal>1</Calc1stYearModal>
+                    <Sorting>
+                        <Sort>
+                            <Name>GUARANTEEDPREMIUMS.DCVALUE</Name>
+                            <Direction>0</Direction>
+                            <StartYear>1</StartYear>
+                            <EndYear>1</EndYear>
+                        </Sort>
+                    </Sorting>
+                    <Filtering>
+          </Filtering>
+                    <ShowAvailableRiders>0</ShowAvailableRiders>
+                </Options>
+                <Scenario>
+                    <Request>
+                        <FaceAmount>500000</FaceAmount>
+                        <Premium>0</Premium>
+                        <PaymentMode>0</PaymentMode>
+                        <UnderwritingClassInfo type="Product">
+                            <Class>5</Class>
+                            <TableRating>0</TableRating>
+                            <VTClassID>3</VTClassID>
+                            <VTSmokingStatus>3</VTSmokingStatus>
+                        </UnderwritingClassInfo>
+                    </Request>
+                    <Return>
+                        <DisplayedInformation>
+                            <ProductInformation>
+                                <DisplayName>Pacific PL Promise 20 (09-20)</DisplayName>
+                                <NAICCertified>false</NAICCertified>
+                                <RateCard>N/A</RateCard>
+                                <SoftwareVersion>N/A</SoftwareVersion>
+                                <PolicyFormNumber>PL16LYT</PolicyFormNumber>
+                                <AgeNearestLast>Nearest</AgeNearestLast>
+                                <CalculatedAge>45</CalculatedAge>
+                                <ModalFactors>
+                                    <Factor name="Semi Annual" type="Percent" value="0.51" />
+                                    <Factor name="Quarterly" type="Percent" value="0.26" />
+                                    <Factor name="Monthly Bank Draft" type="Percent" value="0.085" />
+                                </ModalFactors>
+                                <ExtraFees>
+                                    <PolicyFee>60</PolicyFee>
+                                </ExtraFees>
+                                <YearsLevel>20</YearsLevel>
+                                <GuaranteedPeriod value="20" type="Years" />
+                                <MaxYearsToShow>30</MaxYearsToShow>
+                                <MaturityAge value="95" type="Age" />
+                                <IssueAges>
+                                    <Minimum>18</Minimum>
+                                    <Maximum>65</Maximum>
+                                </IssueAges>
+                                <FaceAmounts>
+                                    <Minimum>50000</Minimum>
+                                    <Maximum>999999999</Maximum>
+                                </FaceAmounts>
+                                <MinimumPremium>0</MinimumPremium>
+                                <Reentry>
+                                    <Text>N/A</Text>
+                                </Reentry>
+                                <Conversion>
+                                    <Text>See Narrative</Text>
+                                </Conversion>
+                                <UnderwritingClasses>
+                                    <ClassIDRan>5</ClassIDRan>
+                                    <ClassNameRan>Pref Tob</ClassNameRan>
+                                </UnderwritingClasses>
+                            </ProductInformation>
+                            <PremiumInformation>
+                                <Premiums type="Guaranteed">
+                                    <TotalPremiums>
+                                        <Premium year="1" value="$2,572.49" />
+                                        <Premium year="2" value="$2,572.49" />
+                                        <Premium year="3" value="$2,572.49" />
+                                        <Premium year="4" value="$2,572.49" />
+                                        <Premium year="5" value="$2,572.49" />
+                                        <Premium year="6" value="$2,572.49" />
+                                        <Premium year="7" value="$2,572.49" />
+                                        <Premium year="8" value="$2,572.49" />
+                                        <Premium year="9" value="$2,572.49" />
+                                        <Premium year="10" value="$2,572.49" />
+                                        <Premium year="11" value="$2,572.49" />
+                                        <Premium year="12" value="$2,572.49" />
+                                        <Premium year="13" value="$2,572.49" />
+                                        <Premium year="14" value="$2,572.49" />
+                                        <Premium year="15" value="$2,572.49" />
+                                        <Premium year="16" value="$2,572.49" />
+                                        <Premium year="17" value="$2,572.49" />
+                                        <Premium year="18" value="$2,572.49" />
+                                        <Premium year="19" value="$2,572.49" />
+                                        <Premium year="20" value="$2,572.49" />
+                                    </TotalPremiums>
+                                </Premiums>
+                                <FirstYearModalPremiums>
+                                    <Premium modal="Guar1stAnnual" value="$2,572.49" />
+                                    <Premium modal="Guar1stSemiAnnual" value="$1,311.97" />
+                                    <Premium modal="Guar1stQuarterly" value="$668.85" />
+                                    <Premium modal="Guar1stMonthlyBankDraft" value="$218.66" />
+                                </FirstYearModalPremiums>
+                            </PremiumInformation>
+                        </DisplayedInformation>
+                    </Return>
+                </Scenario>
+                <CompanyInfo>
+                    <Name>Pacific Life</Name>
+                    <NAIC>
+                        <Code>67466</Code>
+                        <NAICCertified>false</NAICCertified>
+                    </NAIC>
+                    <Address>
+                        <Street>700 Newport Center Drive</Street>
+                        <CityStateZip>Newport Beach CA 92660-6397</CityStateZip>
+                    </Address>
+                    <Phone>949-219-3011</Phone>
+                    <URL>www.pacificlife.com</URL>
+                    <CompanyType>Stock</CompanyType>
+                    <Founded>1868</Founded>
+                    <DataDate>12/31/2019</DataDate>
+                    <RateDate>2/1/2021</RateDate>
+                    <Assets>$145,661,154</Assets>
+                    <Liabilities>$135,151,553</Liabilities>
+                    <Ratings>
+                        <AMBest>A+(2)</AMBest>
+                        <SandP>AA-(4)</SandP>
+                        <Fitch>AA-(4)</Fitch>
+                        <Moodys>A1(5)</Moodys>
+                    </Ratings>
+                </CompanyInfo>
+            </Product>
+            <Product id="1896" name="Lincoln TermAccel 20 (eTicket Only) (01-21)" type="TERM">
+                <Options>
+                    <BreakDownPremiums>0</BreakDownPremiums>
+                    <CalcToPenny>1</CalcToPenny>
+                    <DisplayProductClasses>0</DisplayProductClasses>
+                    <GetCompanyInfo>1</GetCompanyInfo>
+                    <ShowCurrentRates>0</ShowCurrentRates>
+                    <ShowRemovedProducts>1</ShowRemovedProducts>
+                    <ShowProdInfoOnRemoval>1</ShowProdInfoOnRemoval>
+                    <RetrieveProductListIDs>0</RetrieveProductListIDs>
+                    <ShowProdInfoOnly>0</ShowProdInfoOnly>
+                    <ShowPremiumsOnly>0</ShowPremiumsOnly>
+                    <YearsToCalc>
+                        <Year>1</Year>
+                        <Year>2</Year>
+                        <Year>3</Year>
+                        <Year>4</Year>
+                        <Year>5</Year>
+                        <Year>6</Year>
+                        <Year>7</Year>
+                        <Year>8</Year>
+                        <Year>9</Year>
+                        <Year>10</Year>
+                        <Year>11</Year>
+                        <Year>12</Year>
+                        <Year>13</Year>
+                        <Year>14</Year>
+                        <Year>15</Year>
+                        <Year>16</Year>
+                        <Year>17</Year>
+                        <Year>18</Year>
+                        <Year>19</Year>
+                        <Year>20</Year>
+                    </YearsToCalc>
+                    <Calc1stYearModal>1</Calc1stYearModal>
+                    <Sorting>
+                        <Sort>
+                            <Name>GUARANTEEDPREMIUMS.DCVALUE</Name>
+                            <Direction>0</Direction>
+                            <StartYear>1</StartYear>
+                            <EndYear>1</EndYear>
+                        </Sort>
+                    </Sorting>
+                    <Filtering>
+          </Filtering>
+                    <ShowAvailableRiders>0</ShowAvailableRiders>
+                </Options>
+                <Scenario>
+                    <Request>
+                        <FaceAmount>500000</FaceAmount>
+                        <Premium>0</Premium>
+                        <PaymentMode>0</PaymentMode>
+                        <UnderwritingClassInfo type="Product">
+                            <Class>4</Class>
+                            <TableRating>0</TableRating>
+                            <VTClassID>3</VTClassID>
+                            <VTSmokingStatus>3</VTSmokingStatus>
+                        </UnderwritingClassInfo>
+                    </Request>
+                    <Return>
+                        <DisplayedInformation>
+                            <ProductInformation>
+                                <DisplayName>Lincoln TermAccel 20 (eTicket Only) (01-21)</DisplayName>
+                                <NAICCertified>false</NAICCertified>
+                                <RateCard>N/A</RateCard>
+                                <SoftwareVersion>N/A</SoftwareVersion>
+                                <PolicyFormNumber>TRM5065</PolicyFormNumber>
+                                <AgeNearestLast>Nearest</AgeNearestLast>
+                                <CalculatedAge>45</CalculatedAge>
+                                <ModalFactors>
+                                    <Factor name="Semi Annual" type="Percent" value="0.515" />
+                                    <Factor name="Quarterly" type="Percent" value="0.262" />
+                                    <Factor name="Monthly Bank Draft" type="Percent" value="0.0875" />
+                                </ModalFactors>
+                                <ExtraFees>
+                                    <PolicyFee>90</PolicyFee>
+                                </ExtraFees>
+                                <YearsLevel>20</YearsLevel>
+                                <GuaranteedPeriod value="20" type="Years" />
+                                <MaxYearsToShow>20</MaxYearsToShow>
+                                <MaturityAge value="95" type="Age" />
+                                <IssueAges>
+                                    <Minimum>18</Minimum>
+                                    <Maximum>60</Maximum>
+                                </IssueAges>
+                                <FaceAmounts>
+                                    <Minimum>100000</Minimum>
+                                    <Maximum>1000000</Maximum>
+                                </FaceAmounts>
+                                <MinimumPremium>0</MinimumPremium>
+                                <Reentry>
+                                    <Text>N/A</Text>
+                                </Reentry>
+                                <Conversion>
+                                    <Text>See Narrative</Text>
+                                </Conversion>
+                                <UnderwritingClasses>
+                                    <ClassIDRan>4</ClassIDRan>
+                                    <ClassNameRan>Pfd Tob</ClassNameRan>
+                                </UnderwritingClasses>
+                            </ProductInformation>
+                            <PremiumInformation>
+                                <Premiums type="Guaranteed">
+                                    <TotalPremiums>
+                                        <Premium year="1" value="$2,720.00" />
+                                        <Premium year="2" value="$2,720.00" />
+                                        <Premium year="3" value="$2,720.00" />
+                                        <Premium year="4" value="$2,720.00" />
+                                        <Premium year="5" value="$2,720.00" />
+                                        <Premium year="6" value="$2,720.00" />
+                                        <Premium year="7" value="$2,720.00" />
+                                        <Premium year="8" value="$2,720.00" />
+                                        <Premium year="9" value="$2,720.00" />
+                                        <Premium year="10" value="$2,720.00" />
+                                        <Premium year="11" value="$2,720.00" />
+                                        <Premium year="12" value="$2,720.00" />
+                                        <Premium year="13" value="$2,720.00" />
+                                        <Premium year="14" value="$2,720.00" />
+                                        <Premium year="15" value="$2,720.00" />
+                                        <Premium year="16" value="$2,720.00" />
+                                        <Premium year="17" value="$2,720.00" />
+                                        <Premium year="18" value="$2,720.00" />
+                                        <Premium year="19" value="$2,720.00" />
+                                        <Premium year="20" value="$2,720.00" />
+                                    </TotalPremiums>
+                                </Premiums>
+                                <FirstYearModalPremiums>
+                                    <Premium modal="Guar1stAnnual" value="$2,720.00" />
+                                    <Premium modal="Guar1stSemiAnnual" value="$1,400.80" />
+                                    <Premium modal="Guar1stQuarterly" value="$712.64" />
+                                    <Premium modal="Guar1stMonthlyBankDraft" value="$238.01" />
+                                </FirstYearModalPremiums>
+                            </PremiumInformation>
+                        </DisplayedInformation>
+                    </Return>
+                </Scenario>
+                <CompanyInfo>
+                    <Name>Lincoln National Life Insurance Company</Name>
+                    <NAIC>
+                        <Code>65676</Code>
+                        <NAICCertified>false</NAICCertified>
+                    </NAIC>
+                    <Address>
+                        <Street>1500 Market Street Suite 3900</Street>
+                        <CityStateZip>Philadelphia PA 19102-2112</CityStateZip>
+                    </Address>
+                    <Phone>215-448-1400</Phone>
+                    <URL>www.lfg.com</URL>
+                    <CompanyType>Stock</CompanyType>
+                    <Founded>1905</Founded>
+                    <DataDate>12/31/2019</DataDate>
+                    <RateDate>2/1/2021</RateDate>
+                    <Assets>$267,230,224</Assets>
+                    <Liabilities>$259,075,697</Liabilities>
+                    <Ratings>
+                        <AMBest>A+(2)</AMBest>
+                        <SandP>AA-(4)</SandP>
+                        <Fitch>A+(5)</Fitch>
+                        <Moodys>A1(5)</Moodys>
+                    </Ratings>
+                </CompanyInfo>
+            </Product>
+            <Product id="1245" name="United Omaha Term Life Answers 20 (04-20)" type="TERM">
+                <Options>
+                    <BreakDownPremiums>0</BreakDownPremiums>
+                    <CalcToPenny>1</CalcToPenny>
+                    <DisplayProductClasses>0</DisplayProductClasses>
+                    <GetCompanyInfo>1</GetCompanyInfo>
+                    <ShowCurrentRates>0</ShowCurrentRates>
+                    <ShowRemovedProducts>1</ShowRemovedProducts>
+                    <ShowProdInfoOnRemoval>1</ShowProdInfoOnRemoval>
+                    <RetrieveProductListIDs>0</RetrieveProductListIDs>
+                    <ShowProdInfoOnly>0</ShowProdInfoOnly>
+                    <ShowPremiumsOnly>0</ShowPremiumsOnly>
+                    <YearsToCalc>
+                        <Year>1</Year>
+                        <Year>2</Year>
+                        <Year>3</Year>
+                        <Year>4</Year>
+                        <Year>5</Year>
+                        <Year>6</Year>
+                        <Year>7</Year>
+                        <Year>8</Year>
+                        <Year>9</Year>
+                        <Year>10</Year>
+                        <Year>11</Year>
+                        <Year>12</Year>
+                        <Year>13</Year>
+                        <Year>14</Year>
+                        <Year>15</Year>
+                        <Year>16</Year>
+                        <Year>17</Year>
+                        <Year>18</Year>
+                        <Year>19</Year>
+                        <Year>20</Year>
+                    </YearsToCalc>
+                    <Calc1stYearModal>1</Calc1stYearModal>
+                    <Sorting>
+                        <Sort>
+                            <Name>GUARANTEEDPREMIUMS.DCVALUE</Name>
+                            <Direction>0</Direction>
+                            <StartYear>1</StartYear>
+                            <EndYear>1</EndYear>
+                        </Sort>
+                    </Sorting>
+                    <Filtering>
+          </Filtering>
+                    <ShowAvailableRiders>0</ShowAvailableRiders>
+                </Options>
+                <Scenario>
+                    <Request>
+                        <FaceAmount>500000</FaceAmount>
+                        <Premium>0</Premium>
+                        <PaymentMode>0</PaymentMode>
+                        <UnderwritingClassInfo type="Product">
+                            <Class>5</Class>
+                            <TableRating>0</TableRating>
+                            <VTClassID>4</VTClassID>
+                            <VTSmokingStatus>3</VTSmokingStatus>
+                        </UnderwritingClassInfo>
+                    </Request>
+                    <Return>
+                        <DisplayedInformation>
+                            <ProductInformation>
+                                <DisplayName>United Omaha Term Life Answers 20 (04-20)</DisplayName>
+                                <NAICCertified>false</NAICCertified>
+                                <RateCard>L6516_1005</RateCard>
+                                <SoftwareVersion>WinFlex Web</SoftwareVersion>
+                                <PolicyFormNumber>6182L-0696 or state equivalent</PolicyFormNumber>
+                                <AgeNearestLast>Last</AgeNearestLast>
+                                <CalculatedAge>45</CalculatedAge>
+                                <ModalFactors>
+                                    <Factor name="Semi Annual" type="Percent" value="0.52" />
+                                    <Factor name="Quarterly" type="Percent" value="0.265" />
+                                    <Factor name="Monthly Bank Draft" type="Percent" value="0.086" />
+                                </ModalFactors>
+                                <ExtraFees>
+                                    <PolicyFee>62.5</PolicyFee>
+                                </ExtraFees>
+                                <YearsLevel>20</YearsLevel>
+                                <GuaranteedPeriod value="20" type="Years" />
+                                <MaxYearsToShow>0</MaxYearsToShow>
+                                <MaturityAge value="95" type="Age" />
+                                <IssueAges>
+                                    <Minimum>18</Minimum>
+                                    <Maximum>65</Maximum>
+                                </IssueAges>
+                                <FaceAmounts>
+                                    <Minimum>100000</Minimum>
+                                    <Maximum>999999999</Maximum>
+                                </FaceAmounts>
+                                <MinimumPremium>0</MinimumPremium>
+                                <Reentry>
+                                    <Text>N/A</Text>
+                                </Reentry>
+                                <Conversion>
+                                    <Text>To age 74</Text>
+                                </Conversion>
+                                <UnderwritingClasses>
+                                    <ClassIDRan>5</ClassIDRan>
+                                    <ClassNameRan>Pfd Tob</ClassNameRan>
+                                </UnderwritingClasses>
+                            </ProductInformation>
+                            <PremiumInformation>
+                                <Premiums type="Guaranteed">
+                                    <TotalPremiums>
+                                        <Premium year="1" value="$2,777.50" />
+                                        <Premium year="2" value="$2,777.50" />
+                                        <Premium year="3" value="$2,777.50" />
+                                        <Premium year="4" value="$2,777.50" />
+                                        <Premium year="5" value="$2,777.50" />
+                                        <Premium year="6" value="$2,777.50" />
+                                        <Premium year="7" value="$2,777.50" />
+                                        <Premium year="8" value="$2,777.50" />
+                                        <Premium year="9" value="$2,777.50" />
+                                        <Premium year="10" value="$2,777.50" />
+                                        <Premium year="11" value="$2,777.50" />
+                                        <Premium year="12" value="$2,777.50" />
+                                        <Premium year="13" value="$2,777.50" />
+                                        <Premium year="14" value="$2,777.50" />
+                                        <Premium year="15" value="$2,777.50" />
+                                        <Premium year="16" value="$2,777.50" />
+                                        <Premium year="17" value="$2,777.50" />
+                                        <Premium year="18" value="$2,777.50" />
+                                        <Premium year="19" value="$2,777.50" />
+                                        <Premium year="20" value="$2,777.50" />
+                                    </TotalPremiums>
+                                </Premiums>
+                                <FirstYearModalPremiums>
+                                    <Premium modal="Guar1stAnnual" value="$2,777.50" />
+                                    <Premium modal="Guar1stSemiAnnual" value="$1,444.30" />
+                                    <Premium modal="Guar1stQuarterly" value="$736.04" />
+                                    <Premium modal="Guar1stMonthlyBankDraft" value="$238.87" />
+                                </FirstYearModalPremiums>
+                            </PremiumInformation>
+                        </DisplayedInformation>
+                    </Return>
+                </Scenario>
+                <CompanyInfo>
+                    <Name>United of Omaha Life Insurance Co</Name>
+                    <NAIC>
+                        <Code>69868</Code>
+                        <NAICCertified>false</NAICCertified>
+                    </NAIC>
+                    <Address>
+                        <Street>3300 Mutual of Omaha Plaza</Street>
+                        <CityStateZip>Omaha NE 68175</CityStateZip>
+                    </Address>
+                    <Phone>402-342-7600</Phone>
+                    <URL>www.mutualofomaha.com</URL>
+                    <CompanyType>Stock</CompanyType>
+                    <Founded>1926</Founded>
+                    <DataDate>12/31/2019</DataDate>
+                    <RateDate>2/1/2021</RateDate>
+                    <Assets>$26,246,357</Assets>
+                    <Liabilities>$24,484,419</Liabilities>
+                    <Ratings>
+                        <AMBest>A+(2)</AMBest>
+                        <SandP>A+(5)</SandP>
+                        <Fitch>
+            </Fitch>
+                        <Moodys>A1(5)</Moodys>
+                    </Ratings>
+                </CompanyInfo>
+            </Product>
+            <Product id="498" name="SBLI Premium Term 20 (Drop Ticket Only)(06-19)" type="TERM">
+                <Options>
+                    <BreakDownPremiums>0</BreakDownPremiums>
+                    <CalcToPenny>1</CalcToPenny>
+                    <DisplayProductClasses>0</DisplayProductClasses>
+                    <GetCompanyInfo>1</GetCompanyInfo>
+                    <ShowCurrentRates>0</ShowCurrentRates>
+                    <ShowRemovedProducts>1</ShowRemovedProducts>
+                    <ShowProdInfoOnRemoval>1</ShowProdInfoOnRemoval>
+                    <RetrieveProductListIDs>0</RetrieveProductListIDs>
+                    <ShowProdInfoOnly>0</ShowProdInfoOnly>
+                    <ShowPremiumsOnly>0</ShowPremiumsOnly>
+                    <YearsToCalc>
+                        <Year>1</Year>
+                        <Year>2</Year>
+                        <Year>3</Year>
+                        <Year>4</Year>
+                        <Year>5</Year>
+                        <Year>6</Year>
+                        <Year>7</Year>
+                        <Year>8</Year>
+                        <Year>9</Year>
+                        <Year>10</Year>
+                        <Year>11</Year>
+                        <Year>12</Year>
+                        <Year>13</Year>
+                        <Year>14</Year>
+                        <Year>15</Year>
+                        <Year>16</Year>
+                        <Year>17</Year>
+                        <Year>18</Year>
+                        <Year>19</Year>
+                        <Year>20</Year>
+                    </YearsToCalc>
+                    <Calc1stYearModal>1</Calc1stYearModal>
+                    <Sorting>
+                        <Sort>
+                            <Name>GUARANTEEDPREMIUMS.DCVALUE</Name>
+                            <Direction>0</Direction>
+                            <StartYear>1</StartYear>
+                            <EndYear>1</EndYear>
+                        </Sort>
+                    </Sorting>
+                    <Filtering>
+          </Filtering>
+                    <ShowAvailableRiders>0</ShowAvailableRiders>
+                </Options>
+                <Scenario>
+                    <Request>
+                        <FaceAmount>500000</FaceAmount>
+                        <Premium>0</Premium>
+                        <PaymentMode>0</PaymentMode>
+                        <UnderwritingClassInfo type="Product">
+                            <Class>6</Class>
+                            <TableRating>0</TableRating>
+                            <VTClassID>5</VTClassID>
+                            <VTSmokingStatus>3</VTSmokingStatus>
+                        </UnderwritingClassInfo>
+                    </Request>
+                    <Return>
+                        <DisplayedInformation>
+                            <ProductInformation>
+                                <DisplayName>SBLI Premium Term 20 (Drop Ticket Only)(06-19)</DisplayName>
+                                <NAICCertified>true</NAICCertified>
+                                <RateCard>MA 01801</RateCard>
+                                <SoftwareVersion>NA</SoftwareVersion>
+                                <PolicyFormNumber>M-91</PolicyFormNumber>
+                                <AgeNearestLast>Nearest</AgeNearestLast>
+                                <CalculatedAge>45</CalculatedAge>
+                                <ModalFactors>
+                                    <Factor name="Semi Annual" type="Percent" value="0.51" />
+                                    <Factor name="Quarterly" type="Percent" value="0.26" />
+                                    <Factor name="Monthly Bank Draft" type="Percent" value="0.08333" />
+                                </ModalFactors>
+                                <ExtraFees>
+                                    <PolicyFee>72</PolicyFee>
+                                </ExtraFees>
+                                <YearsLevel>20</YearsLevel>
+                                <GuaranteedPeriod value="20" type="Years" />
+                                <MaxYearsToShow>0</MaxYearsToShow>
+                                <MaturityAge value="85" type="Age" />
+                                <IssueAges>
+                                    <Minimum>18</Minimum>
+                                    <Maximum>55</Maximum>
+                                </IssueAges>
+                                <FaceAmounts>
+                                    <Minimum>100000</Minimum>
+                                    <Maximum>20000000</Maximum>
+                                </FaceAmounts>
+                                <MinimumPremium>10</MinimumPremium>
+                                <Reentry>
+                                    <Text>NA</Text>
+                                </Reentry>
+                                <Conversion>
+                                    <Text>End of 20 yr or Earlier of age 70</Text>
+                                </Conversion>
+                                <UnderwritingClasses>
+                                    <ClassIDRan>6</ClassIDRan>
+                                    <ClassNameRan>Std Nic</ClassNameRan>
+                                </UnderwritingClasses>
+                            </ProductInformation>
+                            <PremiumInformation>
+                                <Premiums type="Guaranteed">
+                                    <TotalPremiums>
+                                        <Premium year="1" value="$3,476.25" />
+                                        <Premium year="2" value="$3,476.25" />
+                                        <Premium year="3" value="$3,476.25" />
+                                        <Premium year="4" value="$3,476.25" />
+                                        <Premium year="5" value="$3,476.25" />
+                                        <Premium year="6" value="$3,476.25" />
+                                        <Premium year="7" value="$3,476.25" />
+                                        <Premium year="8" value="$3,476.25" />
+                                        <Premium year="9" value="$3,476.25" />
+                                        <Premium year="10" value="$3,476.25" />
+                                        <Premium year="11" value="$3,476.25" />
+                                        <Premium year="12" value="$3,476.25" />
+                                        <Premium year="13" value="$3,476.25" />
+                                        <Premium year="14" value="$3,476.25" />
+                                        <Premium year="15" value="$3,476.25" />
+                                        <Premium year="16" value="$3,476.25" />
+                                        <Premium year="17" value="$3,476.25" />
+                                        <Premium year="18" value="$3,476.25" />
+                                        <Premium year="19" value="$3,476.25" />
+                                        <Premium year="20" value="$3,476.25" />
+                                    </TotalPremiums>
+                                </Premiums>
+                                <FirstYearModalPremiums>
+                                    <Premium modal="Guar1stAnnual" value="$3,476.25" />
+                                    <Premium modal="Guar1stSemiAnnual" value="$1,772.89" />
+                                    <Premium modal="Guar1stQuarterly" value="$903.83" />
+                                    <Premium modal="Guar1stMonthlyBankDraft" value="$289.68" />
+                                </FirstYearModalPremiums>
+                            </PremiumInformation>
+                            <InfoNotes>
+                                <Note>
+                                    <Type>Informational</Type>
+                                    <Text>All policy face amounts of $750,000 or less, ages 18 through 60, qualify for our innovative accelerated underwriting with a telemed exam. All risk classes apply; there are no knock-outs. All cases outside of these criteria will be traditionally underwritten.</Text>
+                                </Note>
+                            </InfoNotes>
+                        </DisplayedInformation>
+                    </Return>
+                </Scenario>
+                <CompanyInfo>
+                    <Name>The Savings Bank Life Insurance Company</Name>
+                    <NAIC>
+                        <Code>70435</Code>
+                        <NAICCertified>true</NAICCertified>
+                    </NAIC>
+                    <Address>
+                        <Street>One Linscott Road</Street>
+                        <CityStateZip>Woburn MA 01801</CityStateZip>
+                    </Address>
+                    <Phone>781-938-3500</Phone>
+                    <URL>www.sbli.com</URL>
+                    <CompanyType>Mutual</CompanyType>
+                    <Founded>1991</Founded>
+                    <DataDate>12/31/2019</DataDate>
+                    <RateDate>2/1/2021</RateDate>
+                    <Assets>$3,407,591</Assets>
+                    <Liabilities>$3,213,689</Liabilities>
+                    <Ratings>
+                        <AMBest>A(3)</AMBest>
+                        <SandP>A-(7)</SandP>
+                        <Fitch>
+            </Fitch>
+                        <Moodys>
+            </Moodys>
+                    </Ratings>
+                </CompanyInfo>
+            </Product>
+            <Product id="1752" name="Protective Classic Choice Term 20 (01-21)" type="TERM">
+                <Options>
+                    <BreakDownPremiums>0</BreakDownPremiums>
+                    <CalcToPenny>1</CalcToPenny>
+                    <DisplayProductClasses>0</DisplayProductClasses>
+                    <GetCompanyInfo>1</GetCompanyInfo>
+                    <ShowCurrentRates>0</ShowCurrentRates>
+                    <ShowRemovedProducts>1</ShowRemovedProducts>
+                    <ShowProdInfoOnRemoval>1</ShowProdInfoOnRemoval>
+                    <RetrieveProductListIDs>0</RetrieveProductListIDs>
+                    <ShowProdInfoOnly>0</ShowProdInfoOnly>
+                    <ShowPremiumsOnly>0</ShowPremiumsOnly>
+                    <YearsToCalc>
+                        <Year>1</Year>
+                        <Year>2</Year>
+                        <Year>3</Year>
+                        <Year>4</Year>
+                        <Year>5</Year>
+                        <Year>6</Year>
+                        <Year>7</Year>
+                        <Year>8</Year>
+                        <Year>9</Year>
+                        <Year>10</Year>
+                        <Year>11</Year>
+                        <Year>12</Year>
+                        <Year>13</Year>
+                        <Year>14</Year>
+                        <Year>15</Year>
+                        <Year>16</Year>
+                        <Year>17</Year>
+                        <Year>18</Year>
+                        <Year>19</Year>
+                        <Year>20</Year>
+                    </YearsToCalc>
+                    <Calc1stYearModal>1</Calc1stYearModal>
+                    <Sorting>
+                        <Sort>
+                            <Name>GUARANTEEDPREMIUMS.DCVALUE</Name>
+                            <Direction>0</Direction>
+                            <StartYear>1</StartYear>
+                            <EndYear>1</EndYear>
+                        </Sort>
+                    </Sorting>
+                    <Filtering>
+          </Filtering>
+                    <ShowAvailableRiders>0</ShowAvailableRiders>
+                </Options>
+                <Scenario>
+                    <Request>
+                        <FaceAmount>500000</FaceAmount>
+                        <Premium>0</Premium>
+                        <PaymentMode>0</PaymentMode>
+                        <UnderwritingClassInfo type="Product">
+                            <Class>4</Class>
+                            <TableRating>0</TableRating>
+                            <VTClassID>5</VTClassID>
+                            <VTSmokingStatus>3</VTSmokingStatus>
+                        </UnderwritingClassInfo>
+                    </Request>
+                    <Return>
+                        <DisplayedInformation>
+                            <ProductInformation>
+                                <DisplayName>Protective Classic Choice Term 20 (01-21)</DisplayName>
+                                <NAICCertified>true</NAICCertified>
+                                <RateCard>N/A</RateCard>
+                                <SoftwareVersion>WinFlex Web</SoftwareVersion>
+                                <PolicyFormNumber>N/A</PolicyFormNumber>
+                                <AgeNearestLast>Nearest</AgeNearestLast>
+                                <CalculatedAge>45</CalculatedAge>
+                                <ModalFactors>
+                                    <Factor name="Semi Annual" type="Percent" value="0.52" />
+                                    <Factor name="Quarterly" type="Percent" value="0.27" />
+                                    <Factor name="Monthly Bank Draft" type="Percent" value="0.085" />
+                                </ModalFactors>
+                                <ExtraFees>
+                                    <PolicyFee>65</PolicyFee>
+                                </ExtraFees>
+                                <YearsLevel>20</YearsLevel>
+                                <GuaranteedPeriod value="20" type="Years" />
+                                <MaxYearsToShow>20</MaxYearsToShow>
+                                <MaturityAge value="95" type="Age" />
+                                <IssueAges>
+                                    <Minimum>18</Minimum>
+                                    <Maximum>62</Maximum>
+                                </IssueAges>
+                                <FaceAmounts>
+                                    <Minimum>100000</Minimum>
+                                    <Maximum>50000000</Maximum>
+                                </FaceAmounts>
+                                <MinimumPremium>0</MinimumPremium>
+                                <Reentry>
+                                    <Text>N/A</Text>
+                                </Reentry>
+                                <Conversion>
+                                    <Text>Conversion rights expire earlier of the level premium term period – less two years or the anniversary nearest the insured’s 70th birthday, whichever comes first.</Text>
+                                </Conversion>
+                                <UnderwritingClasses>
+                                    <ClassIDRan>4</ClassIDRan>
+                                    <ClassNameRan>Tobacco</ClassNameRan>
+                                </UnderwritingClasses>
+                            </ProductInformation>
+                            <PremiumInformation>
+                                <Premiums type="Guaranteed">
+                                    <TotalPremiums>
+                                        <Premium year="1" value="$3,845.00" />
+                                        <Premium year="2" value="$3,845.00" />
+                                        <Premium year="3" value="$3,845.00" />
+                                        <Premium year="4" value="$3,845.00" />
+                                        <Premium year="5" value="$3,845.00" />
+                                        <Premium year="6" value="$3,845.00" />
+                                        <Premium year="7" value="$3,845.00" />
+                                        <Premium year="8" value="$3,845.00" />
+                                        <Premium year="9" value="$3,845.00" />
+                                        <Premium year="10" value="$3,845.00" />
+                                        <Premium year="11" value="$3,845.00" />
+                                        <Premium year="12" value="$3,845.00" />
+                                        <Premium year="13" value="$3,845.00" />
+                                        <Premium year="14" value="$3,845.00" />
+                                        <Premium year="15" value="$3,845.00" />
+                                        <Premium year="16" value="$3,845.00" />
+                                        <Premium year="17" value="$3,845.00" />
+                                        <Premium year="18" value="$3,845.00" />
+                                        <Premium year="19" value="$3,845.00" />
+                                        <Premium year="20" value="$3,845.00" />
+                                    </TotalPremiums>
+                                </Premiums>
+                                <FirstYearModalPremiums>
+                                    <Premium modal="Guar1stAnnual" value="$3,845.00" />
+                                    <Premium modal="Guar1stSemiAnnual" value="$1,999.40" />
+                                    <Premium modal="Guar1stQuarterly" value="$1,038.15" />
+                                    <Premium modal="Guar1stMonthlyBankDraft" value="$326.83" />
+                                </FirstYearModalPremiums>
+                            </PremiumInformation>
+                        </DisplayedInformation>
+                    </Return>
+                </Scenario>
+                <CompanyInfo>
+                    <Name>Protective Life Ins Co</Name>
+                    <NAIC>
+                        <Code>68136</Code>
+                        <NAICCertified>true</NAICCertified>
+                    </NAIC>
+                    <Address>
+                        <Street>2801 Highway 280 South</Street>
+                        <CityStateZip>Birmingham AL 35223</CityStateZip>
+                    </Address>
+                    <Phone>205-268-1000</Phone>
+                    <URL>www.protective.com</URL>
+                    <CompanyType>Stock</CompanyType>
+                    <Founded>1907</Founded>
+                    <DataDate>12/31/2019</DataDate>
+                    <RateDate>2/1/2021</RateDate>
+                    <Assets>$70,360,857</Assets>
+                    <Liabilities>$65,445,111</Liabilities>
+                    <Ratings>
+                        <AMBest>A+(2)</AMBest>
+                        <SandP>AA-(4)</SandP>
+                        <Fitch>A+(5)</Fitch>
+                        <Moodys>A1(5)</Moodys>
+                    </Ratings>
+                </CompanyInfo>
+            </Product>
+            <Product id="1205" name="Protective Custom Choice 20 (12-19)" type="TERM">
+                <Options>
+                    <BreakDownPremiums>0</BreakDownPremiums>
+                    <CalcToPenny>1</CalcToPenny>
+                    <DisplayProductClasses>0</DisplayProductClasses>
+                    <GetCompanyInfo>1</GetCompanyInfo>
+                    <ShowCurrentRates>0</ShowCurrentRates>
+                    <ShowRemovedProducts>1</ShowRemovedProducts>
+                    <ShowProdInfoOnRemoval>1</ShowProdInfoOnRemoval>
+                    <RetrieveProductListIDs>0</RetrieveProductListIDs>
+                    <ShowProdInfoOnly>0</ShowProdInfoOnly>
+                    <ShowPremiumsOnly>0</ShowPremiumsOnly>
+                    <YearsToCalc>
+                        <Year>1</Year>
+                        <Year>2</Year>
+                        <Year>3</Year>
+                        <Year>4</Year>
+                        <Year>5</Year>
+                        <Year>6</Year>
+                        <Year>7</Year>
+                        <Year>8</Year>
+                        <Year>9</Year>
+                        <Year>10</Year>
+                        <Year>11</Year>
+                        <Year>12</Year>
+                        <Year>13</Year>
+                        <Year>14</Year>
+                        <Year>15</Year>
+                        <Year>16</Year>
+                        <Year>17</Year>
+                        <Year>18</Year>
+                        <Year>19</Year>
+                        <Year>20</Year>
+                    </YearsToCalc>
+                    <Calc1stYearModal>1</Calc1stYearModal>
+                    <Sorting>
+                        <Sort>
+                            <Name>GUARANTEEDPREMIUMS.DCVALUE</Name>
+                            <Direction>0</Direction>
+                            <StartYear>1</StartYear>
+                            <EndYear>1</EndYear>
+                        </Sort>
+                    </Sorting>
+                    <Filtering>
+          </Filtering>
+                    <ShowAvailableRiders>0</ShowAvailableRiders>
+                </Options>
+                <Scenario>
+                    <Request>
+                        <FaceAmount>500000</FaceAmount>
+                        <Premium>0</Premium>
+                        <PaymentMode>0</PaymentMode>
+                        <UnderwritingClassInfo type="Product">
+                            <Class>4</Class>
+                            <TableRating>0</TableRating>
+                            <VTClassID>5</VTClassID>
+                            <VTSmokingStatus>3</VTSmokingStatus>
+                        </UnderwritingClassInfo>
+                    </Request>
+                    <Return>
+                        <DisplayedInformation>
+                            <ProductInformation>
+                                <DisplayName>Protective Custom Choice 20 (12-19)</DisplayName>
+                                <NAICCertified>true</NAICCertified>
+                                <RateCard>N/A</RateCard>
+                                <SoftwareVersion>WinFlex Web</SoftwareVersion>
+                                <PolicyFormNumber>UL-17</PolicyFormNumber>
+                                <AgeNearestLast>Nearest</AgeNearestLast>
+                                <CalculatedAge>45</CalculatedAge>
+                                <ModalFactors>
+                                    <Factor name="Semi Annual" type="Percent" value="0.50846849" />
+                                    <Factor name="Quarterly" type="Percent" value="0.25638261" />
+                                    <Factor name="Monthly Bank Draft" type="Percent" value="0.08595044" />
+                                </ModalFactors>
+                                <ExtraFees>
+                                    <PolicyFee>0</PolicyFee>
+                                </ExtraFees>
+                                <YearsLevel>20</YearsLevel>
+                                <GuaranteedPeriod value="20" type="Years" />
+                                <MaxYearsToShow>20</MaxYearsToShow>
+                                <MaturityAge value="121" type="Age" />
+                                <IssueAges>
+                                    <Minimum>18</Minimum>
+                                    <Maximum>63</Maximum>
+                                </IssueAges>
+                                <FaceAmounts>
+                                    <Minimum>100000</Minimum>
+                                    <Maximum>999999999</Maximum>
+                                </FaceAmounts>
+                                <MinimumPremium>0</MinimumPremium>
+                                <Reentry>
+                                    <Text>N/A</Text>
+                                </Reentry>
+                                <Conversion>
+                                    <Text>Yes. See Narrative.</Text>
+                                </Conversion>
+                                <UnderwritingClasses>
+                                    <ClassIDRan>4</ClassIDRan>
+                                    <ClassNameRan>Tobacco</ClassNameRan>
+                                </UnderwritingClasses>
+                            </ProductInformation>
+                            <PremiumInformation>
+                                <Premiums type="Guaranteed">
+                                    <TotalPremiums>
+                                        <Premium year="1" value="$4,000.67" />
+                                        <Premium year="2" value="$4,000.67" />
+                                        <Premium year="3" value="$4,000.67" />
+                                        <Premium year="4" value="$4,000.67" />
+                                        <Premium year="5" value="$4,000.67" />
+                                        <Premium year="6" value="$4,000.67" />
+                                        <Premium year="7" value="$4,000.67" />
+                                        <Premium year="8" value="$4,000.67" />
+                                        <Premium year="9" value="$4,000.67" />
+                                        <Premium year="10" value="$4,000.67" />
+                                        <Premium year="11" value="$4,000.67" />
+                                        <Premium year="12" value="$4,000.67" />
+                                        <Premium year="13" value="$4,000.67" />
+                                        <Premium year="14" value="$4,000.67" />
+                                        <Premium year="15" value="$4,000.67" />
+                                        <Premium year="16" value="$4,000.67" />
+                                        <Premium year="17" value="$4,000.67" />
+                                        <Premium year="18" value="$4,000.67" />
+                                        <Premium year="19" value="$4,000.67" />
+                                        <Premium year="20" value="$4,000.67" />
+                                    </TotalPremiums>
+                                </Premiums>
+                                <FirstYearModalPremiums>
+                                    <Premium modal="Guar1stAnnual" value="$4,000.67" />
+                                    <Premium modal="Guar1stSemiAnnual" value="$2,034.17" />
+                                    <Premium modal="Guar1stQuarterly" value="$1,025.69" />
+                                    <Premium modal="Guar1stMonthlyBankDraft" value="$343.83" />
+                                </FirstYearModalPremiums>
+                            </PremiumInformation>
+                            <InfoNotes>
+                                <Note>
+                                    <Type>Informational</Type>
+                                    <Text>
+                  </Text>
+                                </Note>
+                            </InfoNotes>
+                        </DisplayedInformation>
+                    </Return>
+                </Scenario>
+                <CompanyInfo>
+                    <Name>Protective Life Ins Co</Name>
+                    <NAIC>
+                        <Code>68136</Code>
+                        <NAICCertified>true</NAICCertified>
+                    </NAIC>
+                    <Address>
+                        <Street>2801 Highway 280 South</Street>
+                        <CityStateZip>Birmingham AL 35223</CityStateZip>
+                    </Address>
+                    <Phone>205-268-1000</Phone>
+                    <URL>www.protective.com</URL>
+                    <CompanyType>Stock</CompanyType>
+                    <Founded>1907</Founded>
+                    <DataDate>12/31/2019</DataDate>
+                    <RateDate>2/1/2021</RateDate>
+                    <Assets>$70,360,857</Assets>
+                    <Liabilities>$65,445,111</Liabilities>
+                    <Ratings>
+                        <AMBest>A+(2)</AMBest>
+                        <SandP>AA-(4)</SandP>
+                        <Fitch>A+(5)</Fitch>
+                        <Moodys>A1(5)</Moodys>
+                    </Ratings>
+                </CompanyInfo>
+            </Product>
+        </Products>
+    </VitalTermNet>
+    <Error>
+        <Type>Message</Type>
+        <Description>Login Error: ERROR_SUCCESS</Description>
+    </Error>
+    <Error>
+        <Type>Message</Type>
+        <Description>VitalTerm_Net Run Speed=1499.9893 milliseconds</Description>
+    </Error>
+    <Error>
+        <Type>Message</Type>
+        <Description>Total Run Speed=1671.8648 milliseconds</Description>
+    </Error>
+</LifeLink>
